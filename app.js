@@ -35,7 +35,9 @@ app.post('/sendMail', (req,res)=>{
             if (error) {
               console.log(error);
             } else {
-                console.log('Email sent: ' + info.response)
+                res.status(200).json({
+                  message : "Email have been sended with success..."
+                })
             }
           });
      
